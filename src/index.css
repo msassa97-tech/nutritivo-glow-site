@@ -40,6 +40,17 @@ All colors MUST be HSL.
 
     --shadow-soft: 0 8px 24px -4px hsl(350 48% 70% / 0.12);
     --shadow-card: 0 2px 12px -2px hsl(350 48% 70% / 0.08);
+    --shadow-glow: 0 0 40px hsl(350 48% 70% / 0.15);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-card/80 backdrop-blur-xl border border-primary/10;
   }
 }
 

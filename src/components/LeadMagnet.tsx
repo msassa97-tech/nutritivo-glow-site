@@ -1,56 +1,87 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast";
 import ebookCover from "@/assets/ebook-cover.jpg";
 
 const LeadMagnet = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [agreed, setAgreed] = useState(false);
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !agreed) {
+      toast({
+        title: "Atenção",
+        description: "Preencha o e-mail e aceite a política de privacidade.",
+        variant: "destructive",
+      });
+      return;
+    }
+    toast({
+      title: "E-book enviado!",
+      description: "Confira seu e-mail para baixar o guia.",
+    });
+  };
+  
   return (
-    <section className="py-20 px-6">
-      <div className="container max-w-6xl mx-auto">
-        <div className="bg-card rounded-[2rem] shadow-soft overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      
+      <div className="container max-w-6xl mx-auto relative z-10">
+        <div className="glass-dark rounded-[2rem] shadow-card overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* E-book image */}
-            <div className="p-16 flex items-center justify-center bg-gradient-to-br from-secondary/30 to-background">
-              <div className="relative">
+            <div className="p-8 sm:p-16 flex items-center justify-center bg-gradient-to-br from-secondary/30 to-background/50 backdrop-blur-sm">
+              <div className="relative animate-float">
                 <img 
                   src={ebookCover}
                   alt="Guia de Nutrição Essencial"
-                  className="w-full max-w-sm rounded-2xl shadow-soft"
+                  className="w-full max-w-xs sm:max-w-sm rounded-2xl shadow-glow"
                 />
               </div>
             </div>
             
             {/* Form */}
-            <div className="px-8 py-16 lg:px-16 lg:py-20">
-              <h2 className="text-4xl lg:text-5xl font-light text-primary mb-6 leading-tight">
+            <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 animate-fade-in">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary mb-6 leading-tight">
                 Baixe Meu<br />
                 E-book Graturito
               </h2>
-              <p className="text-primary/80 mb-8 leading-relaxed">
+              <p className="text-primary/80 mb-8 leading-relaxed text-sm sm:text-base">
                 Descubra segredos para ua vida mais saulável, receitas exclusives e mude sua alimentação para sernere.
               </p>
               
-              <div className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <Input 
                   type="email"
                   placeholder="Seu e-mail"
-                  className="h-12 rounded-xl border-primary/30 focus-visible:ring-primary"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="h-12 rounded-xl border-primary/30 focus-visible:ring-primary glass"
                 />
                 
-                <Button variant="pill" size="xl" className="w-full">
+                <Button type="submit" variant="pill" size="xl" className="w-full">
                   Babkar Agora
                 </Button>
                 
                 <div className="flex items-center gap-2 pt-2">
-                  <Checkbox id="privacy" className="border-primary/50 data-[state=checked]:bg-primary" />
+                  <Checkbox 
+                    id="privacy" 
+                    checked={agreed}
+                    onCheckedChange={(checked) => setAgreed(checked as boolean)}
+                    className="border-primary/50 data-[state=checked]:bg-primary" 
+                  />
                   <label 
                     htmlFor="privacy"
-                    className="text-sm text-foreground/60 cursor-pointer"
+                    className="text-xs sm:text-sm text-foreground/60 cursor-pointer"
                   >
                     Concordo um a política de prividade.
                   </label>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

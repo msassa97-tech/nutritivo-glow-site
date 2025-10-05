@@ -46,12 +46,12 @@ const LeadMagnet = () => {
             
             {/* Form */}
             <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 animate-fade-in">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary mb-6 leading-tight">
-                Baixe Meu<br />
-                E-book Graturito
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                Guia gratuito:<br />
+                Nutrição descomplicada para o dia a dia
               </h2>
-              <p className="text-primary/80 mb-8 leading-relaxed text-sm sm:text-base">
-                Descubra segredos para ua vida mais saulável, receitas exclusives e mude sua alimentação para sernere.
+              <p className="text-muted-foreground mb-8 leading-relaxed text-sm sm:text-base">
+                Descubra receitas práticas, dicas acessíveis e os primeiros passos para transformar sua alimentação sem pressa e sem pressão.
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -64,7 +64,7 @@ const LeadMagnet = () => {
                 />
                 
                 <Button type="submit" variant="pill" size="xl" className="w-full">
-                  Babkar Agora
+                  Quero baixar agora
                 </Button>
                 
                 <div className="flex items-center gap-2 pt-2">
@@ -78,7 +78,7 @@ const LeadMagnet = () => {
                     htmlFor="privacy"
                     className="text-xs sm:text-sm text-foreground/60 cursor-pointer"
                   >
-                    Concordo um a política de prividade.
+                    Concordo com a política de privacidade.
                   </label>
                 </div>
               </form>

@@ -9,28 +9,28 @@ import { useToast } from "@/hooks/use-toast";
 
 const faqs = [
   {
-    question: "Qual é a sua abrcadiagh nutricional?",
-    answer: "Trabalho com uma abordagem holística e personalizada, focando em nutrição funcional e mudanças de estilo de vida sustentáveis.",
+    question: "Qual é sua abordagem nutricional?",
+    answer: "Baseada em ciência e focada na realidade de cada pessoa. Sem terrorismo alimentar ou dietas restritivas.",
   },
   {
-    question: "Vocües ofercer planos alimentares personalizzes?",
-    answer: "Sim! Cada plano é desenvolvido especificamente para suas necessidades, objetivos e preferências alimentares individuais.",
+    question: "Você oferece planos personalizados?",
+    answer: "Sim. Cada plano é único, elaborado a partir da sua rotina, preferências e exames.",
   },
   {
-    question: "Aceitm convênios médicos?",
-    answer: "Atualmente trabalho de forma particular, mas forneço recibos detalhados para que você possa solicitar reembolso ao seu plano de saúde.",
+    question: "Atende por convênio?",
+    answer: "Atualmente, realizo apenas atendimentos particulares.",
   },
   {
-    question: "Quais site custos das consultas?",
-    answer: "Os valores variam de acordo com o tipo de atendimento. Entre em contato para conhecer os pacotes e opções disponíveis.",
+    question: "Qual o valor da consulta?",
+    answer: "As informações completas são enviadas após o agendamento do contato.",
   },
   {
-    question: "Posso reagender mia consulta?",
-    answer: "Sim, com pelo menos 24 horas de antecedência. Reagendamentos podem ser feitos pelo WhatsApp ou e-mail.",
+    question: "Posso reagendar minha consulta?",
+    answer: "Sim, com aviso prévio.",
   },
   {
-    question: "Vocües atendem crinças?",
-    answer: "Sim, atendo crianças a partir de 2 anos de idade, sempre com acompanhamento dos responsáveis.",
+    question: "Você atende crianças?",
+    answer: "Sim, realizo atendimento infantil com foco em educação alimentar e saúde a longo prazo.",
   },
 ];
 
@@ -49,8 +49,8 @@ const FAQ = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container max-w-4xl mx-auto relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary text-center mb-16 animate-fade-in">
-          Perguntas Frequentes
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 animate-fade-in">
+          Perguntas frequentes
         </h2>
         
         <Accordion type="single" collapsible className="space-y-4 mb-12">
@@ -78,7 +78,7 @@ const FAQ = () => {
             onClick={handleConsulta}
             className="w-full sm:w-auto animate-scale-in"
           >
-            Agendar Consulta
+            Agendar minha consulta agora mesmo
           </Button>
         </div>
       </div>

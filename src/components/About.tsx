@@ -30,24 +30,15 @@ const About = () => {
           
           {/* Content */}
           <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-8">
-              MY STORY
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
+              Sou Luana Salvino, nutricionista
             </h2>
             <div className="space-y-6 text-foreground/80">
               <p>
-                From a young age, I was fascinated by food to nourish and heal.
+                Atendo na Clínica Virtus, em Cajazeiras – PB, e minha missão é mostrar que é possível mudar sua alimentação com leveza, prazer e resultados reais.
               </p>
               <p>
-                Today, as certified nutritionist, my own struggles by the health led me am passionate others achieve to balance and vitality wensity through personalized wellness plans.
-              </p>
-            </div>
-            
-            <div className="mt-10 pt-8 border-t border-border">
-              <p className="font-bold text-foreground mb-2">
-                Credentials:
-              </p>
-              <p className="text-foreground/80">
-                Certified Nutritionist (CN), Diploma in Holistic Health
+                Nada de fórmulas prontas. Aqui, a nutrição é construída junto com você, respeitando o seu tempo, sua história e o que funciona na sua rotina.
               </p>
             </div>
             
@@ -57,7 +48,7 @@ const About = () => {
               onClick={handleConsulta}
               className="mt-8 w-full sm:w-auto"
             >
-              Agendar Consulta
+              Quero começar minha jornada com você
             </Button>
           </div>
         </div>

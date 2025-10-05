@@ -69,9 +69,15 @@ const Events = () => {
       <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container max-w-7xl mx-auto relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-16 animate-fade-in">
-          EVENTS & WORKSHOPS
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 animate-fade-in">
+          Congressos e eventos
         </h2>
+        <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
+          Nutrição baseada em ciência, não em modismos
+        </p>
+        <p className="text-base text-muted-foreground mb-16 max-w-3xl">
+          Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica.
+        </p>
         
         <div className="relative">
           {/* Navigation buttons - Hidden on mobile */}
@@ -146,7 +152,7 @@ const Events = () => {
             onClick={handleConsulta}
             className="w-full sm:w-auto animate-scale-in"
           >
-            Agendar Consulta
+            Quero ser acompanhada por uma profissional atualizada
           </Button>
         </div>
       </div>

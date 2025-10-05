@@ -50,12 +50,11 @@ const Hero = () => {
                 }}
                 className="max-w-xl"
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                  NOURISH.<br />
-                  GLOW. LIVE.
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  A nutrição que acolhe, ensina e transforma
                 </h1>
                 <p className="text-base sm:text-lg text-muted-foreground mb-8">
-                  Personalized nutrition for a balanced and vibrant life.
+                  Comer bem não precisa ser difícil, radical ou distante da sua realidade
                 </p>
                 <Button 
                   variant="pill" 
@@ -63,7 +62,7 @@ const Hero = () => {
                   onClick={handleConsulta}
                   className="w-full sm:w-auto"
                 >
-                  Agendar Consulta
+                  Agende sua consulta
                 </Button>
               </motion.div>
             </div>

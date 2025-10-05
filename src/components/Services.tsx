@@ -5,23 +5,23 @@ import { useToast } from "@/hooks/use-toast";
 const services = [
   {
     icon: Utensils,
-    title: "PERSONAZIZED MEAL PLANS",
-    description: "Customized eating guides for your health goals.",
+    title: "Planos alimentares personalizados",
+    description: "Guias alimentares práticos e reais, feitos sob medida para seus objetivos e desafios.",
   },
   {
     icon: MessageSquare,
-    title: "ONE-IN-ONE COACHING",
-    description: "Dedicated support and expert guidance.",
+    title: "Consultas individuais com acompanhamento constante",
+    description: "Orientação de verdade, com escuta ativa, cuidado e presença em cada etapa.",
   },
   {
     icon: Users,
-    title: "NUTRITION WORKSHOPS",
-    description: "Group sessions for shared learning & growth",
+    title: "Workshops de nutrição",
+    description: "Encontros em grupo para troca de experiências, aprendizado e transformação coletiva.",
   },
   {
     icon: Leaf,
-    title: "LIFESTYLE TRANSFORMATION",
-    description: "Holistic journey to shared gives and rounl eeting meals.",
+    title: "Mudança de estilo de vida",
+    description: "Mais do que comer bem, é sobre viver melhor. Vamos juntas cuidar de você por completo.",
   },
 ];
 
@@ -40,9 +40,12 @@ const Services = () => {
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-16 animate-fade-in">
-          HOW CAN I HELP YOU
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 animate-fade-in">
+          Como posso te ajudar
         </h2>
+        <p className="text-lg text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+          Minha abordagem é personalizada e respeita seu ritmo de vida. Não existe receita padrão, existe um plano feito para você.
+        </p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => {
@@ -56,7 +59,7 @@ const Services = () => {
                 <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary stroke-[1.5]" />
                 </div>
-                <h3 className="text-sm sm:text-base font-black mb-4 leading-tight">
+                <h3 className="text-sm sm:text-base font-bold mb-4 leading-tight">
                   {service.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
@@ -74,7 +77,7 @@ const Services = () => {
             onClick={handleConsulta}
             className="w-full sm:w-auto animate-scale-in"
           >
-            Agendar Consulta
+            Quero essa mudança na minha vida
           </Button>
         </div>
       </div>

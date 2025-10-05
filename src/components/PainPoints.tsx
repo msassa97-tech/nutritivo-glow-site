@@ -5,23 +5,23 @@ import { useToast } from "@/hooks/use-toast";
 const painPoints = [
   {
     icon: Moon,
-    title: "FEEL TIRED ALL TIME",
-    description: "Low energy, brain fog, and constant fatigue holding you back from living fully.",
+    title: "Sente cansaço o tempo todo",
+    description: "Falta de energia, mente confusa, corpo pesado — e nenhuma dieta resolve.",
   },
   {
     icon: Heart,
-    title: "STRUGGLE WITH YOUR RELATIONSHIP WITH FOOD",
-    description: "Yo-yo dieting, emotional eating and guilt around meals.",
+    title: "Tem uma relação difícil com a comida",
+    description: "Entre dietas, culpa e recomeços, você sente que nunca consegue manter o equilíbrio.",
   },
   {
     icon: Waypoints,
-    title: "DON'T KNOW WHERE TO START WITH HEALTHY EATING",
-    description: "Overwhelmed by conflicting and endless diet trends.",
+    title: "Não sabe por onde começar",
+    description: "São tantas informações e modismos que tudo parece confuso demais.",
   },
   {
     icon: Leaf,
-    title: "WANT TO LOSE WEIGHT SUSTAINABLY",
-    description: "Frustrated by temporary fixes and ready to lasting change.",
+    title: "Quer emagrecer de forma sustentável",
+    description: "Você está cansada de soluções temporárias. O que busca é mudança duradoura, com saúde.",
   },
 ];
 
@@ -40,9 +40,12 @@ const PainPoints = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-16 animate-fade-in">
-          IF YOU...
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 animate-fade-in">
+          Se você...
         </h2>
+        <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          Você merece um cuidado que te entenda de verdade. Me diga se alguma dessas situações soa familiar:
+        </p>
         
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           {painPoints.map((point, index) => {
@@ -58,7 +61,7 @@ const PainPoints = () => {
                     <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary stroke-[1.5]" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-black mb-3">
+                    <h3 className="text-base sm:text-lg font-bold mb-3">
                       {point.title}
                     </h3>
                     <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
@@ -78,7 +81,7 @@ const PainPoints = () => {
             onClick={handleConsulta}
             className="w-full sm:w-auto animate-scale-in"
           >
-            Agendar Consulta
+            Sim, eu preciso disso
           </Button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Leaf, Phone, MapPin, Mail, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Leaf, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,25 +12,21 @@ const Footer = () => {
             <div className="flex items-center justify-center sm:justify-start gap-3 mb-3">
               <Leaf className="w-8 h-8 text-primary" />
               <div>
-                <div className="font-bold text-base sm:text-lg">NUTRIÇÃO & BEM-ESTAR</div>
-                <div className="text-xs sm:text-sm text-primary/70">Nourish Your Journey</div>
+                <div className="font-bold text-base sm:text-lg">Nutricionista Luana Salvino</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Atendimento presencial na Clínica Virtus</div>
               </div>
             </div>
           </div>
           
           {/* Contact info */}
           <div className="space-y-3 text-center sm:text-left">
-            <a href="tel:1112345678" className="flex items-center justify-center sm:justify-start gap-3 hover:text-primary transition-colors">
-              <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Telefone: (11) 1234-5678</span>
+            <a href="https://wa.me/5583999999999" className="flex items-center justify-center sm:justify-start gap-3 hover:text-primary transition-colors">
+              <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" />
+              <span className="text-xs sm:text-sm">Agendamentos via WhatsApp</span>
             </a>
-            <a href="mailto:contato@nutricao.com" className="flex items-center justify-center sm:justify-start gap-3 hover:text-primary transition-colors">
-              <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Email: contato@nutricao.com</span>
-            </a>
-            <div className="flex items-center justify-center sm:justify-start gap-3">
-              <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Endereço: R. Saudável, 123 - Saúde SP</span>
+            <div className="flex items-start justify-center sm:justify-start gap-3">
+              <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-xs sm:text-sm">Av. Dr. Aldo Matos de Sá, 1030 – Centro, Cajazeiras – PB</span>
             </div>
           </div>
           
@@ -59,7 +55,7 @@ const Footer = () => {
         
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-primary/10 text-center text-xs sm:text-sm text-foreground/60">
-          <p>© 2024 Nutrição & Bem-Estar. Todos os direitos reservados.</p>
+          <p>© 2024 Nutricionista Luana Salvino. Todos os direitos reservados.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-2">
             <a href="#" className="text-primary hover:underline">Política de Privacidade</a>
             <a href="#" className="text-primary hover:underline">Termos de Uso</a>

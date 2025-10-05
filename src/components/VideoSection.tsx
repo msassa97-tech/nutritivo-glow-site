@@ -21,7 +21,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-5xl mx-auto text-center relative z-10">
@@ -29,7 +29,7 @@ const VideoSection = () => {
           Uma consulta que vai além da balança
         </h2>
         
-        <div className="relative glass-dark rounded-3xl shadow-card overflow-hidden max-w-4xl mx-auto group hover:shadow-glow transition-all duration-500 animate-scale-in flex items-center justify-center p-4 sm:p-6 md:p-8">
+        <div className="relative rounded-3xl max-w-xl mx-auto overflow-visible animate-scale-in">
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned 
@@ -41,9 +41,9 @@ const VideoSection = () => {
               borderRadius: '3px',
               margin: '1px auto',
               maxWidth: '540px',
-              minWidth: '326px',
+              minWidth: '280px',
               padding: 0,
-              width: 'calc(100% - 2px)'
+              width: '100%'
             }}
           >
             <div style={{ padding: '16px' }}>

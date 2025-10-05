@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import heroImage from "@/assets/nutritionist-hero.jpg";
+import heroImage from "@/assets/nutritionist-hero-new.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 

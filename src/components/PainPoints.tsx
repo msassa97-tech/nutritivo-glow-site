@@ -1,6 +1,7 @@
 import { Moon, Heart, Waypoints, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
 const painPoints = [
   {
@@ -47,28 +48,38 @@ const PainPoints = () => {
           Você merece um cuidado que te entenda de verdade. Me diga se alguma dessas situações soa familiar:
         </p>
         
-        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 gap-0 mb-12 relative z-10">
           {painPoints.map((point, index) => {
             const Icon = point.icon;
             return (
-              <div 
+              <div
                 key={index}
-                className="glass-dark rounded-3xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 group animate-fade-in-up"
+                className={cn(
+                  "flex flex-col border-border py-10 relative group/feature animate-fade-in-up",
+                  "sm:border-r",
+                  (index === 0 || index === 2) && "sm:border-l",
+                  index < 2 && "sm:border-b"
+                )}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex flex-col sm:flex-row items-start gap-6">
-                  <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary stroke-[1.5]" />
-                  </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-bold mb-3">
-                      {point.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
-                      {point.description}
-                    </p>
-                  </div>
+                {index < 2 && (
+                  <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
+                )}
+                {index >= 2 && (
+                  <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+                )}
+                <div className="mb-4 relative z-10 px-6 sm:px-10">
+                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary/70 group-hover/feature:text-primary transition-colors duration-200 stroke-[1.5]" />
                 </div>
+                <div className="text-lg font-bold mb-2 relative z-10 px-6 sm:px-10">
+                  <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200 origin-center" />
+                  <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block">
+                    {point.title}
+                  </span>
+                </div>
+                <p className="text-sm sm:text-base text-muted-foreground relative z-10 px-6 sm:px-10 leading-relaxed">
+                  {point.description}
+                </p>
               </div>
             );
           })}

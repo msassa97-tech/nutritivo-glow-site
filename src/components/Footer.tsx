@@ -36,7 +36,7 @@ const Footer = () => {
     name: "Termos de Uso",
     href: "#"
   }];
-  return <footer className="py-32 px-6">
+  return <footer className="py-16 px-6">
       <div className="container mx-auto">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
@@ -48,7 +48,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground">Atendimento presencial na Clínica Virtus</p>
               </div>
             </div>
-            <div className="space-y-3 max-w-[70%]">
+            <div className="space-y-2 max-w-[70%]">
               <a href="https://wa.me/5583999999999" className="flex items-center gap-3 hover:text-primary transition-colors text-sm">
                 <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>Agendamentos via WhatsApp</span>
@@ -65,9 +65,6 @@ const Footer = () => {
                   </a>
                 </li>)}
             </ul>
-          </div>
-          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
-            {sections.map((section, sectionIdx) => {})}
           </div>
         </div>
         <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">

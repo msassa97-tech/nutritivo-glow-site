@@ -16,7 +16,7 @@ const Hero = () => {
   
   return (
     <AuroraBackground className="min-h-screen">
-      <section className="min-h-screen flex items-center relative overflow-hidden w-full">
+      <section className="min-h-screen flex items-start lg:items-center relative overflow-hidden w-full pb-0">
         <div className="w-full relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 items-center min-h-screen">
             {/* Content - Top on mobile, Left on desktop */}
@@ -57,12 +57,12 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="w-full h-[60vh] sm:h-[65vh] lg:h-[85vh] relative flex items-end lg:items-center justify-center px-4 pb-0 sm:p-6 lg:p-8 order-2 lg:order-2"
+              className="w-full min-h-[320px] sm:min-h-[380px] lg:h-[85vh] relative flex items-end lg:items-center justify-center px-4 pb-0 sm:px-6 sm:pb-0 lg:p-8 order-2 lg:order-2"
             >
               <img 
                 src={heroImage}
                 alt="Nutricionista profissional"
-                className="w-auto h-full max-w-full object-contain rounded-t-lg lg:rounded-lg"
+                className="w-full h-full max-w-none object-contain object-bottom rounded-t-lg lg:rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-t-lg lg:rounded-lg" />
             </motion.div>

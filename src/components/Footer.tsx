@@ -3,24 +3,6 @@ import { Leaf, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 const Footer = () => {
   const sections = [
     {
-      title: "Serviços",
-      links: [
-        { name: "Emagrecimento", href: "#services" },
-        { name: "Hipertrofia", href: "#services" },
-        { name: "Saúde Intestinal", href: "#services" },
-        { name: "Consultas", href: "#services" },
-      ],
-    },
-    {
-      title: "Sobre",
-      links: [
-        { name: "Sobre Mim", href: "#about" },
-        { name: "Depoimentos", href: "#testimonials" },
-        { name: "Eventos", href: "#events" },
-        { name: "FAQ", href: "#faq" },
-      ],
-    },
-    {
       title: "Contato",
       links: [
         { name: "WhatsApp", href: "https://wa.me/5583999999999" },

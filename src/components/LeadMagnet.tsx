@@ -63,7 +63,7 @@ const LeadMagnet = () => {
                   className="h-12 rounded-xl border-primary/30 focus-visible:ring-primary glass"
                 />
                 
-                <Button type="submit" variant="pill" size="xl" className="w-full">
+                <Button type="submit" variant="pill" className="w-full h-12 sm:h-14 text-base sm:text-lg">
                   Quero baixar agora
                 </Button>
                 

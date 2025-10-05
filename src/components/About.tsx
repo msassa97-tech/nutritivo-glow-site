@@ -34,7 +34,7 @@ const About = () => {
           
           {/* Image */}
           <div className="relative shadow-2xl shadow-primary/40 rounded-2xl overflow-hidden w-full max-w-md mb-8">
-            <img className="w-full object-cover rounded-2xl aspect-square" src={aboutImage} alt="Luana Salvino - Nutricionista" />
+            <img className="w-full object-cover object-top rounded-2xl aspect-square" src={aboutImage} alt="Luana Salvino - Nutricionista" />
           </div>
           
           {/* Button */}

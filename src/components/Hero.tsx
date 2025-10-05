@@ -19,8 +19,27 @@ const Hero = () => {
       <section className="min-h-screen flex items-center relative overflow-hidden w-full">
         <div className="w-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-0 items-center min-h-screen">
-            {/* Content - Left */}
-            <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 flex items-center justify-center">
+            {/* Image - Right on desktop, Top on mobile */}
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="h-[500px] sm:h-[600px] lg:h-[85vh] relative flex items-center justify-center p-2 sm:p-4 lg:p-8 order-first lg:order-last"
+            >
+              <img 
+                src={heroImage}
+                alt="Nutricionista profissional"
+                className="w-auto h-full max-w-full object-contain rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
+            </motion.div>
+
+            {/* Content - Left on desktop, Bottom on mobile */}
+            <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 flex items-center justify-center order-last lg:order-first">
               <motion.div 
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -48,25 +67,6 @@ const Hero = () => {
                 </Button>
               </motion.div>
             </div>
-            
-            {/* Image - Right */}
-            <motion.div 
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 0.5,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="h-[500px] sm:h-[600px] lg:h-[85vh] relative flex items-center justify-center p-2 sm:p-4 lg:p-8"
-            >
-              <img 
-                src={heroImage}
-                alt="Nutricionista profissional"
-                className="w-auto h-full max-w-full object-contain rounded-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
-            </motion.div>
           </div>
         </div>
       </section>

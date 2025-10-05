@@ -1,4 +1,4 @@
-import { Leaf, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Leaf, MapPin, Instagram, MessageCircle } from "lucide-react";
 const Footer = () => {
   const sections = [{
     title: "Contato",
@@ -20,14 +20,6 @@ const Footer = () => {
     icon: <Instagram className="size-5" />,
     href: "#",
     label: "Instagram"
-  }, {
-    icon: <Facebook className="size-5" />,
-    href: "#",
-    label: "Facebook"
-  }, {
-    icon: <MessageCircle className="size-5" />,
-    href: "https://wa.me/5583999999999",
-    label: "WhatsApp"
   }];
   const legalLinks = [{
     name: "Política de Privacidade",
@@ -70,7 +62,11 @@ const Footer = () => {
         <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1">© 2024 Nutricionista Luana Salvino. Todos os direitos reservados.</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row md:gap-6">
-            {legalLinks.map((link, idx) => {})}
+            {legalLinks.map((link, idx) => (
+              <li key={idx} className="hover:text-primary">
+                <a href={link.href}>{link.name}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

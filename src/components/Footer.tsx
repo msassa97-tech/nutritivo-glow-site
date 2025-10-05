@@ -40,7 +40,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground">Atendimento presencial na Clínica Virtus</p>
               </div>
             </div>
-            <div className="space-y-2 max-w-[70%]">
+            <div className="space-y-2 max-w-[70%] lg:mx-auto">
               <a href="https://wa.me/5583999999999" className="flex items-center gap-3 hover:text-primary transition-colors text-sm">
                 <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>Agendamentos via WhatsApp</span>

@@ -85,7 +85,7 @@ const Testimonials = () => {
   });
 
   return (
-    <section className="py-20 px-0 sm:px-4 relative overflow-hidden">
+    <section className="py-20 px-0 sm:px-4 relative overflow-hidden bg-card">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="w-full max-w-7xl mx-auto relative z-10">

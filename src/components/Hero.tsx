@@ -35,7 +35,7 @@ const Hero = () => {
                 <img 
                   src={logoBlack} 
                   alt="Logo Nutricionista Luana Salvino" 
-                  className="w-48 mx-auto mb-6 lg:hidden"
+                  className="w-48 mx-auto lg:mx-0 mb-6"
                 />
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   A nutrição que acolhe, ensina e transforma

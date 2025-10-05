@@ -30,7 +30,7 @@ const LeadMagnet = () => {
     <section className="py-12 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       
-      <div className="container max-w-6xl mx-auto relative z-10">
+      <div className="container max-w-6xl mx-auto relative z-10 w-full px-4 sm:px-6">
         <div className="glass-dark rounded-2xl sm:rounded-[2rem] shadow-card overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* E-book image */}

@@ -68,7 +68,7 @@ const Hero = () => {
               <img 
                 src={heroImage}
                 alt="Nutricionista profissional"
-                className="w-full h-full object-cover object-bottom lg:object-bottom lg:rounded-lg"
+                className="w-full h-full object-cover object-bottom lg:w-auto lg:h-full lg:object-contain lg:object-bottom lg:rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 lg:rounded-lg" />
             </motion.div>

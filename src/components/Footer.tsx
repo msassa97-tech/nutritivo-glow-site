@@ -1,4 +1,5 @@
 import { Leaf, MapPin, Instagram, MessageCircle } from "lucide-react";
+import logoFooter from "@/assets/logo-footer.png";
 const Footer = () => {
   const sections = [{
     title: "Contato",
@@ -28,17 +29,17 @@ const Footer = () => {
     name: "Termos de Uso",
     href: "#"
   }];
-  return <footer className="py-16 px-6">
+  return <footer className="py-16 px-6 bg-card">
       <div className="container mx-auto">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-center lg:justify-center lg:text-center">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-center">
             {/* Logo */}
-            <div className="flex items-center gap-3 lg:justify-center">
-              <Leaf className="w-8 h-8 text-primary" />
-              <div>
-                <h2 className="text-xl font-bold">Nutricionista Luana Salvino</h2>
-                <p className="text-sm text-muted-foreground">Atendimento presencial na Clínica Virtus</p>
-              </div>
+            <div className="flex justify-center lg:justify-center mb-4">
+              <img 
+                src={logoFooter} 
+                alt="Luana Salvino Nutricionista" 
+                className="h-16 w-auto"
+              />
             </div>
             <div className="space-y-2 max-w-[70%] lg:mx-auto">
               <a href="https://wa.me/5583999999999" className="flex items-center gap-3 hover:text-primary transition-colors text-sm">

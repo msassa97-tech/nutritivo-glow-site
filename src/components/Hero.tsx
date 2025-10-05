@@ -57,14 +57,14 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="w-full h-[50vh] sm:h-[55vh] lg:h-[85vh] relative flex items-center justify-center p-4 sm:p-6 lg:p-8 order-2 lg:order-2"
+              className="w-full h-[60vh] sm:h-[65vh] lg:h-[85vh] relative flex items-end lg:items-center justify-center px-4 pb-0 sm:p-6 lg:p-8 order-2 lg:order-2"
             >
               <img 
                 src={heroImage}
                 alt="Nutricionista profissional"
-                className="w-auto h-full max-w-full object-contain rounded-lg"
+                className="w-auto h-full max-w-full object-contain rounded-t-lg lg:rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-t-lg lg:rounded-lg" />
             </motion.div>
           </div>
         </div>

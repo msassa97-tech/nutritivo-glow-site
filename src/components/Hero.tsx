@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/nutritionist-hero-new.png";
-import logoWhite from "@/assets/logo-white.png";
+import logoBlack from "@/assets/logo-black.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 
@@ -33,7 +33,7 @@ const Hero = () => {
                 className="max-w-xl w-full text-center lg:text-left"
               >
                 <img 
-                  src={logoWhite} 
+                  src={logoBlack} 
                   alt="Logo Nutricionista Luana Salvino" 
                   className="w-48 mx-auto mb-6 lg:hidden"
                 />

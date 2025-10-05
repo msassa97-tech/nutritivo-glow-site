@@ -29,7 +29,7 @@ const Services = () => {
       description: "Em breve você será redirecionado para o WhatsApp."
     });
   };
-  return <section className="py-20 px-6 relative overflow-hidden">
+  return <section className="py-20 px-6 relative overflow-hidden bg-card">
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">

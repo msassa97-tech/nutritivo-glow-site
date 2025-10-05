@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/nutritionist-hero-new.png";
+import logoWhite from "@/assets/logo-white.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 
@@ -31,6 +32,11 @@ const Hero = () => {
                 }}
                 className="max-w-xl w-full text-center lg:text-left"
               >
+                <img 
+                  src={logoWhite} 
+                  alt="Logo Nutricionista Luana Salvino" 
+                  className="w-48 mx-auto mb-6 lg:hidden"
+                />
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   A nutrição que acolhe, ensina e transforma
                 </h1>

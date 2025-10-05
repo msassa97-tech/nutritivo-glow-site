@@ -30,7 +30,7 @@ const FAQ = () => {
       description: "Em breve você será redirecionado para o WhatsApp."
     });
   };
-  return <section className="py-20 px-6 relative overflow-hidden">
+  return <section className="pt-12 pb-20 px-6 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container max-w-4xl mx-auto relative z-10">

@@ -1,42 +1,34 @@
 import { Utensils, MessageSquare, Users, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
-const services = [
-  {
-    icon: Utensils,
-    title: "Planos alimentares personalizados",
-    description: "Guias alimentares práticos e reais, feitos sob medida para seus objetivos e desafios.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Consultas individuais com acompanhamento constante",
-    description: "Orientação de verdade, com escuta ativa, cuidado e presença em cada etapa.",
-  },
-  {
-    icon: Users,
-    title: "Workshops de nutrição",
-    description: "Encontros em grupo para troca de experiências, aprendizado e transformação coletiva.",
-  },
-  {
-    icon: Leaf,
-    title: "Mudança de estilo de vida",
-    description: "Mais do que comer bem, é sobre viver melhor. Vamos juntas cuidar de você por completo.",
-  },
-];
-
+const services = [{
+  icon: Utensils,
+  title: "Planos alimentares personalizados",
+  description: "Guias alimentares práticos e reais, feitos sob medida para seus objetivos e desafios."
+}, {
+  icon: MessageSquare,
+  title: "Consultas individuais com acompanhamento constante",
+  description: "Orientação de verdade, com escuta ativa, cuidado e presença em cada etapa."
+}, {
+  icon: Users,
+  title: "Workshops de nutrição",
+  description: "Encontros em grupo para troca de experiências, aprendizado e transformação coletiva."
+}, {
+  icon: Leaf,
+  title: "Mudança de estilo de vida",
+  description: "Mais do que comer bem, é sobre viver melhor. Vamos juntas cuidar de você por completo."
+}];
 const Services = () => {
-  const { toast } = useToast();
-  
+  const {
+    toast
+  } = useToast();
   const handleConsulta = () => {
     toast({
       title: "Agendamento de Consulta",
-      description: "Em breve você será redirecionado para o WhatsApp.",
+      description: "Em breve você será redirecionado para o WhatsApp."
     });
   };
-  
-  return (
-    <section className="py-20 px-6 relative overflow-hidden">
+  return <section className="py-20 px-6 relative overflow-hidden">
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
@@ -49,13 +41,10 @@ const Services = () => {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div 
-                key={index}
-                className="glass-dark rounded-3xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 text-center group animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+          const Icon = service.icon;
+          return <div key={index} className="glass-dark rounded-3xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 text-center group animate-fade-in-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary stroke-[1.5]" />
                 </div>
@@ -65,24 +54,14 @@ const Services = () => {
                 <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
         
         <div className="flex justify-center">
-          <Button 
-            variant="pill" 
-            size="xl"
-            onClick={handleConsulta}
-            className="w-full sm:w-auto animate-scale-in"
-          >
-            Quero essa mudança na minha vida
-          </Button>
+          <Button variant="pill" size="xl" onClick={handleConsulta} className="w-full sm:w-auto animate-scale-in">QUERO ESSA MUDANÇA </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;

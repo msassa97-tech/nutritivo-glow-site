@@ -58,7 +58,7 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="h-[400px] sm:h-[500px] lg:h-[80vh] relative flex items-center justify-center p-4 lg:p-8"
+              className="h-[500px] sm:h-[600px] lg:h-[85vh] relative flex items-center justify-center p-2 sm:p-4 lg:p-8"
             >
               <img 
                 src={heroImage}

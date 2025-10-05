@@ -96,7 +96,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
   }, [initialScroll]);
 
   return (
-    <div className="relative w-full mt-10">
+    <div className="relative w-full mt-10 px-2 sm:px-4">
       <div
         className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5"
         ref={carouselRef}
@@ -104,13 +104,8 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
       >
         <div
           className={cn(
-            "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l",
-          )}
-        />
-        <div
-          className={cn(
-            "flex flex-row justify-start gap-4 pl-3",
-            "max-w-5xl mx-auto",
+            "flex flex-row justify-start gap-4 pl-4 pr-4",
+            "w-full",
           )}
         >
           {items.map((item, index) => {
@@ -139,7 +134,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
           })}
         </div>
       </div>
-      <div className="flex justify-end gap-2 mt-4">
+      <div className="flex justify-end gap-2 mt-4 pr-2 sm:pr-4">
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-primary flex items-center justify-center disabled:opacity-50 hover:bg-primary/80 transition-colors duration-200"
           onClick={handleScrollLeft}

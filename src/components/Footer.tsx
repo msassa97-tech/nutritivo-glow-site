@@ -1,31 +1,42 @@
 import { Leaf, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
-
 const Footer = () => {
-  const sections = [
-    {
-      title: "Contato",
-      links: [
-        { name: "WhatsApp", href: "https://wa.me/5583999999999" },
-        { name: "Instagram", href: "#" },
-        { name: "Facebook", href: "#" },
-        { name: "Localização", href: "#" },
-      ],
-    },
-  ];
-
-  const socialLinks = [
-    { icon: <Instagram className="size-5" />, href: "#", label: "Instagram" },
-    { icon: <Facebook className="size-5" />, href: "#", label: "Facebook" },
-    { icon: <MessageCircle className="size-5" />, href: "https://wa.me/5583999999999", label: "WhatsApp" },
-  ];
-
-  const legalLinks = [
-    { name: "Política de Privacidade", href: "#" },
-    { name: "Termos de Uso", href: "#" },
-  ];
-
-  return (
-    <footer className="py-32 px-6">
+  const sections = [{
+    title: "Contato",
+    links: [{
+      name: "WhatsApp",
+      href: "https://wa.me/5583999999999"
+    }, {
+      name: "Instagram",
+      href: "#"
+    }, {
+      name: "Facebook",
+      href: "#"
+    }, {
+      name: "Localização",
+      href: "#"
+    }]
+  }];
+  const socialLinks = [{
+    icon: <Instagram className="size-5" />,
+    href: "#",
+    label: "Instagram"
+  }, {
+    icon: <Facebook className="size-5" />,
+    href: "#",
+    label: "Facebook"
+  }, {
+    icon: <MessageCircle className="size-5" />,
+    href: "https://wa.me/5583999999999",
+    label: "WhatsApp"
+  }];
+  const legalLinks = [{
+    name: "Política de Privacidade",
+    href: "#"
+  }, {
+    name: "Termos de Uso",
+    href: "#"
+  }];
+  return <footer className="py-32 px-6">
       <div className="container mx-auto">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
@@ -48,46 +59,26 @@ const Footer = () => {
               </div>
             </div>
             <ul className="flex items-center space-x-6 text-muted-foreground">
-              {socialLinks.map((social, idx) => (
-                <li key={idx} className="font-medium hover:text-primary transition-colors">
+              {socialLinks.map((social, idx) => <li key={idx} className="font-medium hover:text-primary transition-colors">
                   <a href={social.href} aria-label={social.label}>
                     {social.icon}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
-            {sections.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  {section.links.map((link, linkIdx) => (
-                    <li
-                      key={linkIdx}
-                      className="font-medium hover:text-primary transition-colors"
-                    >
-                      <a href={link.href}>{link.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {sections.map((section, sectionIdx) => {})}
           </div>
         </div>
         <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1">© 2024 Nutricionista Luana Salvino. Todos os direitos reservados.</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row md:gap-6">
-            {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-primary transition-colors">
+            {legalLinks.map((link, idx) => <li key={idx} className="hover:text-primary transition-colors">
                 <a href={link.href}>{link.name}</a>
-              </li>
-            ))}
+              </li>)}
           </ul>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

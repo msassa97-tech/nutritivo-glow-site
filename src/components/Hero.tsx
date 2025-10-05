@@ -19,27 +19,8 @@ const Hero = () => {
       <section className="min-h-screen flex items-center relative overflow-hidden w-full">
         <div className="w-full relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 items-center min-h-screen">
-            {/* Image - Top on mobile, Right on desktop */}
-            <motion.div 
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 0.5,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="w-full h-[50vh] sm:h-[55vh] lg:h-[85vh] relative flex items-center justify-center p-4 sm:p-6 lg:p-8 order-1 lg:order-2"
-            >
-              <img 
-                src={heroImage}
-                alt="Nutricionista profissional"
-                className="w-auto h-full max-w-full object-contain rounded-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
-            </motion.div>
-
-            {/* Content - Bottom on mobile, Left on desktop */}
-            <div className="w-full px-6 sm:px-8 py-12 lg:px-16 lg:py-20 flex items-center justify-center order-2 lg:order-1">
+            {/* Content - Top on mobile, Left on desktop */}
+            <div className="w-full px-6 sm:px-8 py-8 sm:py-12 lg:px-16 lg:py-20 flex items-center justify-center order-1 lg:order-1">
               <motion.div 
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,6 +47,25 @@ const Hero = () => {
                 </Button>
               </motion.div>
             </div>
+
+            {/* Image - Bottom on mobile, Right on desktop */}
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="w-full h-[50vh] sm:h-[55vh] lg:h-[85vh] relative flex items-center justify-center p-4 sm:p-6 lg:p-8 order-2 lg:order-2"
+            >
+              <img 
+                src={heroImage}
+                alt="Nutricionista profissional"
+                className="w-auto h-full max-w-full object-contain rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
+            </motion.div>
           </div>
         </div>
       </section>

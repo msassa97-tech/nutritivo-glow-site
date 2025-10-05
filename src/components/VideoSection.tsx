@@ -20,14 +20,15 @@ const VideoSection = () => {
           Uma consulta que vai além da balança
         </h2>
         
-        <div className="relative max-w-md mx-auto animate-scale-in">
+        <div className="relative max-w-md mx-auto animate-scale-in overflow-hidden rounded-3xl" style={{ height: '650px' }}>
           <iframe
             src="https://www.instagram.com/reel/DNl1faooYdx/embed"
-            className="w-full rounded-3xl shadow-card hover:shadow-glow transition-all duration-500"
+            className="w-full shadow-card hover:shadow-glow transition-all duration-500"
             style={{
               height: '700px',
               border: 'none',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              marginTop: '-10px'
             }}
             scrolling="no"
             allowTransparency={true}

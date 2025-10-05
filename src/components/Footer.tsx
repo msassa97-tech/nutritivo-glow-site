@@ -29,46 +29,48 @@ const Footer = () => {
     name: "Termos de Uso",
     href: "#"
   }];
-  return <footer className="py-16 px-6 bg-card">
-      <div className="container mx-auto">
-        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-center lg:justify-center lg:text-center">
-          <div className="flex w-full flex-col justify-between gap-6 lg:items-center">
-            {/* Logo */}
-            <div className="flex justify-center lg:justify-center mb-4">
-              <img 
-                src={logoFooter} 
-                alt="Luana Salvino Nutricionista" 
-                className="h-16 w-auto"
-              />
-            </div>
-            <div className="space-y-2 max-w-[70%] lg:mx-auto">
-              <a href="https://wa.me/5583999999999" className="flex items-center gap-3 hover:text-primary transition-colors text-sm">
-                <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>Agendamentos via WhatsApp</span>
-              </a>
-              <div className="flex items-start gap-3 text-sm">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">Av. Dr. Aldo Matos de Sá, 1030 – Centro, Cajazeiras – PB</span>
-              </div>
-            </div>
-            <ul className="flex items-center space-x-6 text-muted-foreground">
-              {socialLinks.map((social, idx) => <li key={idx} className="font-medium hover:text-primary transition-colors">
-                  <a href={social.href} aria-label={social.label}>
-                    {social.icon}
-                  </a>
-                </li>)}
-            </ul>
+  return (
+    <footer className="w-full bg-card">
+      <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+        <div className="flex items-center mb-6">
+          <img 
+            src={logoFooter} 
+            alt="Luana Salvino Nutricionista" 
+            className="h-14 w-auto"
+          />
+        </div>
+        <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-muted-foreground mb-6">
+          Atendimento presencial na Clínica Virtus - Cajazeiras, PB
+        </p>
+        <div className="flex flex-col items-center gap-4 mb-6 text-sm">
+          <a 
+            href="https://wa.me/5583999999999" 
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <MessageCircle className="w-5 h-5 text-primary" />
+            <span>Agendamentos via WhatsApp</span>
+          </a>
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+            <span>Av. Dr. Aldo Matos de Sá, 1030 – Centro, Cajazeiras – PB</span>
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:justify-center md:text-center">
-          <p className="order-2 lg:order-1 text-center">© 2024 Nutricionista Luana Salvino. Todos os direitos reservados.</p>
-          <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row md:gap-6">
-            {legalLinks.map((link, idx) => <li key={idx} className="hover:text-primary">
-                
-              </li>)}
-          </ul>
+        <ul className="flex items-center space-x-6">
+          {socialLinks.map((social, idx) => (
+            <li key={idx} className="hover:text-primary transition-colors">
+              <a href={social.href} aria-label={social.label}>
+                {social.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="border-t border-border">
+        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal text-muted-foreground">
+          © 2024 Nutricionista Luana Salvino. Todos os direitos reservados.
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;

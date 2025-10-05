@@ -16,9 +16,9 @@ const Hero = () => {
   
   return (
     <AuroraBackground className="min-h-screen">
-      <section className="min-h-screen flex items-start lg:items-center relative overflow-hidden w-full pb-0">
-        <div className="w-full relative z-10">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 items-center min-h-screen">
+      <section className="min-h-screen flex items-start lg:items-center relative overflow-hidden w-full">
+        <div className="w-full relative z-10 h-full">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 items-stretch min-h-screen">
             {/* Content - Top on mobile, Left on desktop */}
             <div className="w-full px-6 sm:px-8 py-8 sm:py-12 lg:px-16 lg:py-20 flex items-center justify-center order-1 lg:order-1">
               <motion.div 
@@ -29,7 +29,7 @@ const Hero = () => {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="max-w-xl w-full"
+                className="max-w-xl w-full text-center lg:text-left"
               >
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   A nutrição que acolhe, ensina e transforma
@@ -57,14 +57,14 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="w-full min-h-[320px] sm:min-h-[380px] lg:h-[85vh] relative flex items-end lg:items-center justify-center px-4 pb-0 sm:px-6 sm:pb-0 lg:p-8 order-2 lg:order-2"
+              className="w-full flex-1 lg:h-[85vh] relative flex items-end lg:items-center justify-center px-0 pb-0 lg:p-8 order-2 lg:order-2"
             >
               <img 
                 src={heroImage}
                 alt="Nutricionista profissional"
-                className="w-full h-full max-w-none object-contain object-bottom rounded-t-lg lg:rounded-lg"
+                className="w-full h-full object-cover object-bottom lg:object-contain lg:rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-t-lg lg:rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 lg:rounded-lg" />
             </motion.div>
           </div>
         </div>

@@ -1,19 +1,17 @@
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
 const VideoSection = () => {
-  const { toast } = useToast();
-  
+  const {
+    toast
+  } = useToast();
   const handleConsulta = () => {
     toast({
       title: "Agendamento de Consulta",
-      description: "Em breve você será redirecionado para o WhatsApp.",
+      description: "Em breve você será redirecionado para o WhatsApp."
     });
   };
-  
-  return (
-    <section className="py-20 px-6 relative overflow-hidden">
+  return <section className="py-20 px-6 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-5xl mx-auto text-center relative z-10">
@@ -34,17 +32,8 @@ const VideoSection = () => {
           Você será acolhida, ouvida e orientada com base em evidências, empatia e respeito.
         </p>
         
-        <Button 
-          variant="pill" 
-          size="xl"
-          onClick={handleConsulta}
-          className="w-full sm:w-auto"
-        >
-          Agendar minha consulta agora
-        </Button>
+        <Button variant="pill" size="xl" onClick={handleConsulta} className="w-full sm:w-auto">AGENDAR MINHA CONSULTA</Button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default VideoSection;

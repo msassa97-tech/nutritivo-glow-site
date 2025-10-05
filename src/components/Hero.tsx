@@ -18,8 +18,8 @@ const Hero = () => {
     <AuroraBackground className="min-h-screen">
       <section className="min-h-screen flex items-center relative overflow-hidden w-full">
         <div className="w-full relative z-10">
-          <div className="grid lg:grid-cols-2 gap-0 items-center min-h-screen">
-            {/* Image - Right on desktop, Top on mobile */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 items-center min-h-screen">
+            {/* Image - Top on mobile, Right on desktop */}
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -28,7 +28,7 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="h-[500px] sm:h-[600px] lg:h-[85vh] relative flex items-center justify-center p-2 sm:p-4 lg:p-8 order-first lg:order-last"
+              className="w-full h-[50vh] sm:h-[55vh] lg:h-[85vh] relative flex items-center justify-center p-4 sm:p-6 lg:p-8 order-1 lg:order-2"
             >
               <img 
                 src={heroImage}
@@ -38,8 +38,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 rounded-lg" />
             </motion.div>
 
-            {/* Content - Left on desktop, Bottom on mobile */}
-            <div className="px-6 sm:px-8 py-16 lg:px-16 lg:py-20 flex items-center justify-center order-last lg:order-first">
+            {/* Content - Bottom on mobile, Left on desktop */}
+            <div className="w-full px-6 sm:px-8 py-12 lg:px-16 lg:py-20 flex items-center justify-center order-2 lg:order-1">
               <motion.div 
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -48,12 +48,12 @@ const Hero = () => {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="max-w-xl"
+                className="max-w-xl w-full"
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   A nutrição que acolhe, ensina e transforma
                 </h1>
-                <p className="text-base sm:text-lg text-muted-foreground mb-8">
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8">
                   Comer bem não precisa ser difícil, radical ou distante da sua realidade
                 </p>
                 <Button 

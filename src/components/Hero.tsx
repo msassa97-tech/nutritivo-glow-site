@@ -63,12 +63,12 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="w-full flex-1 lg:h-[85vh] relative flex items-end justify-center px-0 pb-0 lg:p-8 lg:pb-0 order-2 lg:order-2"
+              className="w-full flex-1 lg:h-screen relative flex items-end justify-center px-0 pb-0 lg:px-8 order-2 lg:order-2"
             >
               <img 
                 src={heroImage}
                 alt="Nutricionista profissional"
-                className="w-full h-full object-cover object-bottom lg:object-contain lg:rounded-lg"
+                className="w-full h-full object-cover object-bottom lg:object-bottom lg:rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20 lg:rounded-lg" />
             </motion.div>

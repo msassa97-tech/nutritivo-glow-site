@@ -4,30 +4,28 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import ebookCover from "@/assets/ebook-cover.jpg";
-
 const LeadMagnet = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !agreed) {
       toast({
         title: "Atenção",
         description: "Preencha o e-mail e aceite a política de privacidade.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
     toast({
       title: "E-book enviado!",
-      description: "Confira seu e-mail para baixar o guia.",
+      description: "Confira seu e-mail para baixar o guia."
     });
   };
-  
-  return (
-    <section className="py-12 px-4 sm:px-6 relative overflow-hidden">
+  return <section className="py-12 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10 w-full px-4 sm:px-6">
@@ -36,11 +34,7 @@ const LeadMagnet = () => {
             {/* E-book image */}
             <div className="p-6 sm:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-secondary/30 to-background/50 backdrop-blur-sm">
               <div className="relative animate-float w-full max-w-[280px] sm:max-w-xs">
-                <img 
-                  src={ebookCover}
-                  alt="Guia de Nutrição Essencial"
-                  className="w-full h-auto rounded-xl sm:rounded-2xl shadow-glow"
-                />
+                <img src={ebookCover} alt="Guia de Nutrição Essencial" className="w-full h-auto rounded-xl sm:rounded-2xl shadow-glow" />
               </div>
             </div>
             
@@ -55,39 +49,18 @@ const LeadMagnet = () => {
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-4">
-                <Input 
-                  type="email"
-                  placeholder="Seu e-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="h-12 rounded-xl border-primary/30 focus-visible:ring-primary glass"
-                />
+                <Input type="email" placeholder="Seu e-mail" value={email} onChange={e => setEmail(e.target.value)} className="h-12 rounded-xl border-primary/30 focus-visible:ring-primary glass" />
                 
                 <Button type="submit" variant="pill" className="w-full h-12 sm:h-14 text-base sm:text-lg">
                   Quero baixar agora
                 </Button>
                 
-                <div className="flex items-center gap-2 pt-2">
-                  <Checkbox 
-                    id="privacy" 
-                    checked={agreed}
-                    onCheckedChange={(checked) => setAgreed(checked as boolean)}
-                    className="border-primary/50 data-[state=checked]:bg-primary" 
-                  />
-                  <label 
-                    htmlFor="privacy"
-                    className="text-xs sm:text-sm text-foreground/60 cursor-pointer"
-                  >
-                    Concordo com a política de privacidade.
-                  </label>
-                </div>
+                
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LeadMagnet;

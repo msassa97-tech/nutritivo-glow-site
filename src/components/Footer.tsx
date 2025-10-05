@@ -30,10 +30,10 @@ const Footer = () => {
   }];
   return <footer className="py-16 px-6">
       <div className="container mx-auto">
-        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
-          <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
+        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-center lg:justify-center lg:text-center">
+          <div className="flex w-full flex-col justify-between gap-6 lg:items-center">
             {/* Logo */}
-            <div className="flex items-center gap-3 lg:justify-start">
+            <div className="flex items-center gap-3 lg:justify-center">
               <Leaf className="w-8 h-8 text-primary" />
               <div>
                 <h2 className="text-xl font-bold">Nutricionista Luana Salvino</h2>

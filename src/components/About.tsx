@@ -48,10 +48,10 @@ const About = () => {
             variant="pill" 
             size="xl" 
             onClick={handleConsulta}
-            className="flex items-center gap-2 hover:-translate-y-0.5 transition w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 hover:-translate-y-0.5 transition w-full sm:w-auto px-6 sm:px-8"
           >
-            <span>Quero começar minha jornada com você</span>
-            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span className="whitespace-normal text-center">Quero começar minha jornada com você</span>
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
               <path
                 d="M12.53 6.53a.75.75 0 0 0 0-1.06L7.757.697a.75.75 0 1 0-1.06 1.06L10.939 6l-4.242 4.243a.75.75 0 0 0 1.06 1.06zM0 6v.75h12v-1.5H0z"
                 fill="currentColor"

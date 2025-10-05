@@ -3,6 +3,7 @@ import About from "@/components/About";
 import PainPoints from "@/components/PainPoints";
 import Services from "@/components/Services";
 import VideoSection from "@/components/VideoSection";
+import Testimonials from "@/components/Testimonials";
 import Events from "@/components/Events";
 import LeadMagnet from "@/components/LeadMagnet";
 import FAQ from "@/components/FAQ";
@@ -16,6 +17,7 @@ const Index = () => {
       <PainPoints />
       <Services />
       <VideoSection />
+      <Testimonials />
       <Events />
       <LeadMagnet />
       <FAQ />

@@ -59,7 +59,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+        <div className="mt-8 flex flex-col justify-between gap-4 border-t border-primary/10 py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:justify-center md:text-center">
           <p className="order-2 lg:order-1 text-center">© 2024 Nutricionista Luana Salvino. Todos os direitos reservados.</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row md:gap-6">
             {legalLinks.map((link, idx) => <li key={idx} className="hover:text-primary">

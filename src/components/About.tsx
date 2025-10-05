@@ -11,7 +11,7 @@ const About = () => {
       description: "Em breve você será redirecionado para o WhatsApp."
     });
   };
-  return <section className="py-20 px-6 relative overflow-hidden">
+  return <section className="py-12 px-6 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[520px] rounded-full blur-[300px] -z-10 bg-primary/20" />
       
       <div className="container max-w-6xl mx-auto">

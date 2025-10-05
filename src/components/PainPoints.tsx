@@ -36,7 +36,7 @@ const PainPoints = () => {
   };
   
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section className="py-12 px-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">

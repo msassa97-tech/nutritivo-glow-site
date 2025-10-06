@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
-import eventSeminar from "@/assets/event-seminar.jpg";
-import eventCooking from "@/assets/event-cooking.jpg";
-import eventRetreat from "@/assets/event-retreat.jpg";
 import eventCongress from "@/assets/event-congress.jpg";
 import eventTransplant from "@/assets/event-transplant.png";
 import eventUpdate from "@/assets/event-update.jpg";
@@ -26,24 +23,6 @@ const events = [
     name: "Atualização científica e estratégias práticas para resultados de excelência",
     designation: "Evento de formação profissional",
     quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
-  },
-  {
-    src: eventSeminar,
-    name: "Holistic Health Seminar",
-    designation: "'Eating for Energy' talk",
-    quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
-  },
-  {
-    src: eventCooking,
-    name: "Cooking for Wellness Workshop",
-    designation: "November 15, 2024 | Plant-based meal prep",
-    quote: "Nutrição baseada em ciência, não em modismos. Workshops práticos para transformar sua relação com a comida."
-  },
-  {
-    src: eventRetreat,
-    name: "Mindful Movement & Nutrition Retreat",
-    designation: "Weekend wellness getaway",
-    quote: "Retiros e experiências imersivas focadas em bem-estar integral, unindo nutrição, movimento e autocuidado."
   }
 ];
 const Events = () => {

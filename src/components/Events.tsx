@@ -5,12 +5,19 @@ import eventSeminar from "@/assets/event-seminar.jpg";
 import eventCooking from "@/assets/event-cooking.jpg";
 import eventRetreat from "@/assets/event-retreat.jpg";
 import eventCongress from "@/assets/event-congress.jpg";
+import eventTransplant from "@/assets/event-transplant.png";
 
 const events = [
   {
     src: eventCongress,
     name: "Congresso Saúde da Mulher",
     designation: "15 de setembro de 2025",
+    quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
+  },
+  {
+    src: eventTransplant,
+    name: "Encontro de Transplantados em João Pessoa",
+    designation: "2 de outubro de 2025",
     quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
   },
   {

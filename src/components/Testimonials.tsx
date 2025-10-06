@@ -1,88 +1,46 @@
-import { Carousel, TestimonialCard, iTestimonial } from "@/components/ui/retro-testimonial";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
+import testimonial4 from "@/assets/testimonial-4.jpg";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
 
-type TestimonialDetails = {
-  [key: string]: iTestimonial & { id: string };
-};
-
-const testimonialData = {
-  ids: [
-    "testimonial-001",
-    "testimonial-002",
-    "testimonial-003",
-    "testimonial-004",
-    "testimonial-005",
-    "testimonial-006",
-  ],
-  details: {
-    "testimonial-001": {
-      id: "testimonial-001",
-      description:
-        "A Luana transformou completamente minha relação com a comida. Sem dietas restritivas, aprendi a comer de forma equilibrada e prazerosa. Perdi peso de forma saudável e ganhei qualidade de vida.",
-      profileImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1287&auto=format&fit=crop",
-      name: "Ana Carolina Silva",
-      designation: "Executiva",
-    },
-    "testimonial-002": {
-      id: "testimonial-002",
-      description:
-        "Finalmente encontrei uma nutricionista que entende que cada pessoa é única. O plano alimentar foi feito pensando na minha rotina corrida e nos meus objetivos. Os resultados foram além das expectativas.",
-      profileImage:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1287&auto=format&fit=crop",
-      name: "Mariana Costa",
-      designation: "Empresária",
-    },
-    "testimonial-003": {
-      id: "testimonial-003",
-      description:
-        "Depois de anos lutando contra distúrbios alimentares, encontrei na Luana uma profissional empática e competente. Hoje tenho uma relação saudável com a comida e com meu corpo.",
-      profileImage:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1288&auto=format&fit=crop",
-      name: "Juliana Mendes",
-      designation: "Designer",
-    },
-    "testimonial-004": {
-      id: "testimonial-004",
-      description:
-        "A abordagem da Luana é baseada em ciência, mas também em empatia. Ela não julga, apenas orienta. Consegui alcançar meus objetivos sem sofrimento e com resultados duradouros.",
-      profileImage:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1364&auto=format&fit=crop",
-      name: "Patricia Oliveira",
-      designation: "Professora",
-    },
-    "testimonial-005": {
-      id: "testimonial-005",
-      description:
-        "Como mãe de dois filhos, precisava de um plano que funcionasse na prática. A Luana criou estratégias simples e eficazes que se encaixaram perfeitamente na minha rotina familiar.",
-      profileImage:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1287&auto=format&fit=crop",
-      name: "Fernanda Santos",
-      designation: "Advogada",
-    },
-    "testimonial-006": {
-      id: "testimonial-006",
-      description:
-        "Depois de anos fazendo dietas da moda sem sucesso, aprendi com a Luana que nutrição de verdade é sobre saúde, não sobre restrição. Hoje me sinto mais disposta e confiante.",
-      profileImage:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1287&auto=format&fit=crop",
-      name: "Camila Rodrigues",
-      designation: "Arquiteta",
-    },
-  },
-};
+const testimonialImages = [
+  { id: "1", src: testimonial1, alt: "Depoimento 1" },
+  { id: "2", src: testimonial2, alt: "Depoimento 2" },
+  { id: "3", src: testimonial3, alt: "Depoimento 3" },
+  { id: "4", src: testimonial4, alt: "Depoimento 4" },
+];
 
 const Testimonials = () => {
-  const cards = testimonialData.ids.map((cardId: string, index: number) => {
-    const details = testimonialData.details as TestimonialDetails;
-    return (
-      <TestimonialCard
-        key={cardId}
-        testimonial={details[cardId]}
-        index={index}
-        backgroundImage="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop"
-      />
-    );
-  });
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScrollability = () => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+    }
+  };
+
+  const handleScrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+  }, []);
 
   return (
     <section className="py-20 px-0 sm:px-4 relative overflow-hidden bg-card">
@@ -98,7 +56,53 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <Carousel items={cards} />
+        <div className="relative w-full mt-10 px-2 sm:px-4">
+          <div
+            className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5"
+            ref={carouselRef}
+            onScroll={checkScrollability}
+          >
+            <div className="flex flex-row justify-start gap-4 pl-4 pr-4 w-full">
+              {testimonialImages.map((testimonial, index) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.2 * index,
+                    ease: "easeOut",
+                  }}
+                  key={testimonial.id}
+                  className="last:pr-[5%] md:last:pr-[33%]"
+                >
+                  <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-[280px] md:w-[320px]">
+                    <img
+                      src={testimonial.src}
+                      alt={testimonial.alt}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-end gap-2 mt-4 pr-2 sm:pr-4">
+            <button
+              className="relative z-40 h-10 w-10 rounded-full bg-primary flex items-center justify-center disabled:opacity-50 hover:bg-primary/80 transition-colors duration-200"
+              onClick={handleScrollLeft}
+              disabled={!canScrollLeft}
+            >
+              <ArrowLeft className="h-6 w-6 text-primary-foreground" />
+            </button>
+            <button
+              className="relative z-40 h-10 w-10 rounded-full bg-primary flex items-center justify-center disabled:opacity-50 hover:bg-primary/80 transition-colors duration-200"
+              onClick={handleScrollRight}
+              disabled={!canScrollRight}
+            >
+              <ArrowRight className="h-6 w-6 text-primary-foreground" />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

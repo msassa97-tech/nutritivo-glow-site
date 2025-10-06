@@ -6,6 +6,7 @@ import eventCooking from "@/assets/event-cooking.jpg";
 import eventRetreat from "@/assets/event-retreat.jpg";
 import eventCongress from "@/assets/event-congress.jpg";
 import eventTransplant from "@/assets/event-transplant.png";
+import eventUpdate from "@/assets/event-update.jpg";
 
 const events = [
   {
@@ -18,6 +19,12 @@ const events = [
     src: eventTransplant,
     name: "Encontro de Transplantados em João Pessoa",
     designation: "2 de outubro de 2025",
+    quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
+  },
+  {
+    src: eventUpdate,
+    name: "Atualização científica e estratégias práticas para resultados de excelência",
+    designation: "Evento de formação profissional",
     quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
   },
   {

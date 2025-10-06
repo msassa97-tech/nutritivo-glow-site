@@ -4,8 +4,15 @@ import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import eventSeminar from "@/assets/event-seminar.jpg";
 import eventCooking from "@/assets/event-cooking.jpg";
 import eventRetreat from "@/assets/event-retreat.jpg";
+import eventCongress from "@/assets/event-congress.jpg";
 
 const events = [
+  {
+    src: eventCongress,
+    name: "Congresso Saúde da Mulher",
+    designation: "15 de setembro de 2025",
+    quote: "Participo ativamente de congressos, formações e eventos para oferecer o que há de mais atual, ético e eficaz na nutrição clínica."
+  },
   {
     src: eventSeminar,
     name: "Holistic Health Seminar",
